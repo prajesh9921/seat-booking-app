@@ -4,6 +4,11 @@ This is the **frontend assignment** built with **Next.js**, **Chakra UI**, and *
 
 ---
 
+## 🌐 Hosted Links
+1. Frontend: https://bookseatapp.netlify.app/
+2. Backend: https://seat-booking-app-hov9.onrender.com
+---
+
 ## 🚀 Features
 
 - Displays seats in a grid layout
@@ -14,36 +19,12 @@ This is the **frontend assignment** built with **Next.js**, **Chakra UI**, and *
 
 ---
 
-## 🧾 Folder Structure
-
-online-seat-booking-frontend/
-│
-├── app/                     # App Router pages and layout
-│   ├── page.js              # Main UI with Compartment + InputBox
-│   └── layout.js            # ChakraProvider wrapper & metadata
-│
-├── components/              # UI Components
-│   ├── Compartment.jsx      # Renders seat grid
-│   ├── InputBox.jsx         # Booking form
-│   └── Seat.jsx             # Individual seat component
-│
-├── styles/                  # Global styles
-│   └── globals.css
-│
-├── public/                  # Static assets
-│
-├── .env.local               # Environment variables (API base URL)
-├── package.json
-└── README.md                # You are here
-
----
-
 ## 🛠️ Tech Stack
 
 - Framework: Next.js 13+
 - UI: Chakra UI
 - HTTP Client: Axios
-- Backend API: Node.js + Express (running on localhost:5000)
+- Backend API: Node.js + Express (https://seat-booking-app-hov9.onrender.com)
 - Database: PostgreSQL (via backend)
 
 ---
@@ -51,28 +32,27 @@ online-seat-booking-frontend/
 ## 📦 Installation & Setup
 
 1. Clone the Repository
-
-   git clone https://github.com/your-username/online-seat-booking-frontend.git
+   ```js
+   git clone https://github.com/prajesh9921/seat-booking-app.git
    cd online-seat-booking-frontend
-
+   ```
 2. Install Dependencies
-
+   ```js
    npm install
-
+   ```
 3. Set Up Environment Variables
-
+   ```js
    Create a `.env.local` file in the root:
-
-   NEXT_PUBLIC_API_BASE_URL=http://localhost:5000
+   ```
+   NEXT_PUBLIC_API_BASE_URL=https://seat-booking-app-hov9.onrender.com
 
 4. Run the Development Server
-
+   ```js
    npm run dev
-
+   ```
    Open http://localhost:3000 to view it in your browser.
 
    > Make sure your backend (Node.js server) is running on port 5000.
-
 ---
 
 ## 🧪 API Endpoints Used
