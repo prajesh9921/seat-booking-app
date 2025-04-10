@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🪑 Online Seat Booking App (Frontend)
 
-## Getting Started
+This is the **frontend assignment** built with **Next.js**, **Chakra UI**, and **Axios**. It allows users to book and reset seat reservations by interacting with a Node.js + PostgreSQL backend.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Displays seats in a grid layout
+- Allows booking up to 7 seats at once
+- Displays live booking status
+- Integrates with a REST API backend
+- Uses Chakra UI for styling and responsiveness
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧾 Folder Structure
 
-## Learn More
+online-seat-booking-frontend/
+│
+├── app/                     # App Router pages and layout
+│   ├── page.js              # Main UI with Compartment + InputBox
+│   └── layout.js            # ChakraProvider wrapper & metadata
+│
+├── components/              # UI Components
+│   ├── Compartment.jsx      # Renders seat grid
+│   ├── InputBox.jsx         # Booking form
+│   └── Seat.jsx             # Individual seat component
+│
+├── styles/                  # Global styles
+│   └── globals.css
+│
+├── public/                  # Static assets
+│
+├── .env.local               # Environment variables (API base URL)
+├── package.json
+└── README.md                # You are here
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Framework: Next.js 13+
+- UI: Chakra UI
+- HTTP Client: Axios
+- Backend API: Node.js + Express (running on localhost:5000)
+- Database: PostgreSQL (via backend)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Installation & Setup
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the Repository
+
+   git clone https://github.com/your-username/online-seat-booking-frontend.git
+   cd online-seat-booking-frontend
+
+2. Install Dependencies
+
+   npm install
+
+3. Set Up Environment Variables
+
+   Create a `.env.local` file in the root:
+
+   NEXT_PUBLIC_API_BASE_URL=http://localhost:5000
+
+4. Run the Development Server
+
+   npm run dev
+
+   Open http://localhost:3000 to view it in your browser.
+
+   > Make sure your backend (Node.js server) is running on port 5000.
+
+---
+
+## 🧪 API Endpoints Used
+
+- GET /api/seats → Fetches seat data
+- POST /api/seats/book → Books selected seats
+- POST /api/seats → Resets all bookings
