@@ -4,10 +4,17 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 
 dotenv.config();
+const allowedOrigins = ['http://localhost:3000', 'https://bookseatapp.netlify.app'];
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:3000', // Replace with your frontend URL
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
